@@ -36,7 +36,7 @@ public final class Main extends Application {
     FileChooser fileChooser = new FileChooser();
     Button loadQuesion = new Button("Load Question");
     Label label=new Label("Quiz Generator");
-    label.setFont(Font.font("Cambria", 32));
+    label.setFont(Font.font("Stencil", 32));
     Button operateQuiz = new Button("operate quiz"); 
     Button addQuestion = new Button("add question"); 
     
