@@ -19,6 +19,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -36,8 +38,8 @@ public final class Main extends Application {
     FileChooser fileChooser = new FileChooser();
     Button loadQuesion = new Button("Load Question");
     Label label=new Label("Quiz Generator");
-    label.setFont(Font.font("Stencil", 32));
-    Button operateQuiz = new Button("operate quiz"); 
+    label.setFont(Font.font("Cambria", 32));
+    Button operateQuiz = new Button("generate quiz"); 
     Button addQuestion = new Button("add question"); 
     
    //top
@@ -57,14 +59,18 @@ public final class Main extends Application {
     GridPane.setMargin(numberQ, new Insets(10, 10, 10, 10)); 
     TextField textField=new TextField();
     textField.setMaxWidth(160);
-    Label total=new Label("/50");
+    
+    Label label2=new Label("/ 50");
+    Pane secondRow = new HBox(5);
+    secondRow.getChildren().add(textField);
+    secondRow.getChildren().add(label2);
+    
     Button loadData = new Button("Load Data"); 
     loadData.setMaxWidth(100);
     Button saveFile = new Button("Save  File"); 
     saveFile.setMaxWidth(100);
     gridPane3.add(numberQ, 0,0);
-    gridPane3.add(textField, 0,1);
-    gridPane3.add(total, 1,1);
+    gridPane3.add(secondRow, 0,1);
     gridPane3.add(loadData, 0,3);
     GridPane.setMargin(loadData, new Insets(10, 10, 10, 40)); 
     gridPane3.add(saveFile, 0,4);
