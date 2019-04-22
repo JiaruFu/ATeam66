@@ -12,8 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -43,11 +41,12 @@ public final class Main extends Application {
     //bottom
     gridPane2.add(operateQuiz, 0,0);
     gridPane2.add(addQuestion, 1,0);
-    GridPane.setMargin(operateQuiz, new Insets(10, 10, 10, 80)); 
-    GridPane.setMargin(addQuestion, new Insets(10, 10, 10, 110)); 
+    GridPane.setMargin(operateQuiz, new Insets(10, 10, 10, 50)); 
+    GridPane.setMargin(addQuestion, new Insets(10, 10, 10, 80)); 
     borderPane.setBottom(gridPane2);
     
-    //left TODO might need a gridPane...
+    //left 
+    
   //  gridPane3.
     borderPane.setLeft(gridPane3);
 
@@ -77,7 +76,7 @@ public final class Main extends Application {
     });
     
 
-    stage.setScene(new Scene(borderPane, 500, 500));
+    stage.setScene(new Scene(borderPane, 400, 400));
     stage.show();
   }
 
