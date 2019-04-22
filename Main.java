@@ -37,6 +37,7 @@ public final class Main extends Application {
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
          //load data to where????? TODO
+         // directly retrieve data from json file and update corresponding information
           
         }
       }
